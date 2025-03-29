@@ -16,17 +16,27 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        both_shift {
+            bindings = <&caps_word>;
+            key-positions = <40 53>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default {
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1        &kp N2        &kp N3            &kp N4          &kp N5                                                                                  &kp N6  &kp N7          &kp N8            &kp N9        &kp N0        &kp BACKSLASH
-&kp TAB    &kp Q         &kp W         &kp E             &kp R           &kp T                                                                                   &kp Y   &kp U           &kp I             &kp O         &kp P         &kp BACKSPACE
-&kp CAPS   &kp A         &kp S         &kp D             &kp F           &kp G                &kp HOME  &kp END            &kp LEFT      &kp RIGHT               &kp H   &kp J           &kp K             &kp L         &kp SEMI      &kp SQT
-&kp LSHFT  &kp Z         &kp X         &kp C             &kp V           &kp B                          &kp PG_UP          &kp UP_ARROW                          &kp N   &kp M           &kp COMMA         &kp DOT       &kp FSLH      &kp ENTER
-           &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_CONTROL  &kp LEFT_SHIFT          &lt 1 ENTER  &mo 2     &kp PAGE_DOWN      &kp DOWN      &mo 2      &lt 1 SPACE          &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT
+&kp ESC    &kp N1        &kp N2        &kp N3            &kp N4  &kp N5                                                                                &kp N6  &kp N7  &kp N8            &kp N9        &kp N0        &kp BACKSLASH
+&kp TAB    &kp Q         &kp W         &kp E             &kp R   &kp T                                                                                 &kp Y   &kp U   &kp I             &kp O         &kp P         &kp BACKSPACE
+&kp CAPS   &kp A         &kp S         &kp D             &kp F   &kp G               &kp HOME  &kp END            &kp LEFT      &kp RIGHT              &kp H   &kp J   &kp K             &kp L         &kp SEMI      &kp SQT
+&kp LSHFT  &kp Z         &kp X         &kp C             &kp V   &kp B                         &kp PG_UP          &kp UP_ARROW                         &kp N   &kp M   &kp COMMA         &kp DOT       &kp FSLH      &kp RIGHT_SHIFT
+           &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_CONTROL  &sl 1           &kp DELETE  &kp CAPS  &kp PAGE_DOWN      &kp DOWN      &kp RETURN  &kp SPACE          &sl 1   &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT
             >;
         };
 
@@ -35,8 +45,8 @@
 &kp F1  &kp F2     &kp F3    &kp F4          &kp F5                &kp F6                                                         &kp F7     &kp F8                 &kp F9           &kp F10     &kp F11   &kp F12
 &trans  &kp N1     &kp N2    &kp N3          &kp N4                &kp N5                                                         &kp N6     &kp N7                 &kp N8           &kp N9      &kp N0    &trans
 &trans  &kp GRAVE  &kp LBKT  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp MINUS          &trans  &trans      &trans  &trans          &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT    &kp BSLH  &trans
-&trans  &kp TILDE  &trans    &caps_word      &kp LESS_THAN         &kp UNDER                  &trans      &trans                  &kp PLUS   &kp GREATER_THAN       &kp CARET        &kp DOLLAR  &kp PIPE  &trans
-        &trans     &trans    &trans          &trans                           &trans  &trans  &trans      &trans  &trans  &trans             &trans                 &trans           &trans      &trans
+&trans  &kp TILDE  &trans    &trans          &kp LESS_THAN         &kp UNDER                  &trans      &trans                  &kp PLUS   &kp GREATER_THAN       &kp CARET        &kp DOLLAR  &kp PIPE  &trans
+        &trans     &trans    &trans          &trans                           &trans  &mo 3   &trans      &trans  &trans  &trans             &trans                 &trans           &trans      &trans
             >;
         };
 
